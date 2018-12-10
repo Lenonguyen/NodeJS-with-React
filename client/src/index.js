@@ -13,4 +13,3 @@ const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 ReactDOM.render(
      <Provider store = {store}><App /></Provider>,
      document.querySelector('#root'));
-console.log('stripe key', process.env.REACT_APP_STRIPE_KEY);
