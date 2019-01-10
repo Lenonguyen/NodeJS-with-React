@@ -24,6 +24,10 @@ module.exports = app => {
                }
           });
 
+          const compactEvents = _.compact(events);
+          const uniqueEvents = _.uniqBy(compactEvents, 'email', 'surveyId');
+
+
      });
      app.post('/api/surveys', requireLogin , requireCredits , async (req, res) => {
           const { title, subject, body, recipients } = req.body;
